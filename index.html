@@ -1,13 +1,263 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maison Kalo – Mobilier, déco et accessoires</title>
+  <meta name="description" content="Maison Kalo sélectionne du mobilier, de la décoration et des accessoires pour la maison et le bureau. Découvrez notre catalogue et nos offres du moment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>mon site  web </h1>
-    <p> site web</p>
-    <a href="https://www.example.com" target="_blank">lien</a>
+
+  <!-- Icônes réutilisables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="chair" viewBox="0 0 64 64"><path d="M20 8h24v20H20zM16 28h32v8H16zM22 36v20M42 36v20"/></symbol>
+    <symbol id="lamp" viewBox="0 0 64 64"><path d="M22 8h20l8 22H14zM32 30v22M22 56h20"/></symbol>
+    <symbol id="watch" viewBox="0 0 64 64"><path d="M24 6h16v10H24zM24 48h16v10H24z"/><circle cx="32" cy="32" r="16"/><path d="M32 24v8l6 4"/></symbol>
+    <symbol id="bag" viewBox="0 0 64 64"><path d="M14 22h36l-3 34H17zM24 22v-4a8 8 0 0 1 16 0v4"/></symbol>
+    <symbol id="headphones" viewBox="0 0 64 64"><path d="M12 38v-6a20 20 0 0 1 40 0v6M12 38h8v14h-8zM44 38h8v14h-8z"/></symbol>
+    <symbol id="mug" viewBox="0 0 64 64"><path d="M14 20h28v28a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6zM42 26h6a6 6 0 0 1 0 14h-6"/></symbol>
+    <symbol id="shelf" viewBox="0 0 64 64"><path d="M10 10h44v44H10zM10 28h44M10 42h44M32 10v18"/></symbol>
+    <symbol id="vase" viewBox="0 0 64 64"><path d="M24 26h16l-3 28H27zM32 26c0-10-8-14-12-14 0 8 4 14 12 14zM32 26c0-10 8-14 12-14 0 8-4 14-12 14z"/></symbol>
+  </svg>
+
+  <div class="annonce">Livraison offerte dès 80 € d'achat · Retrait gratuit en boutique</div>
+
+  <header class="site-header">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Ouvrir le menu">
+    <a class="marque" href="#accueil">Maison Kalo</a>
+    <label for="menu-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#offres">Offres</a>
+      <a href="#catalogue">Catalogue</a>
+      <a href="#atouts">Nos engagements</a>
+      <a href="#apropos">À propos</a>
+      <a class="btn btn-petit" href="#contact">Nous contacter</a>
+    </nav>
+  </header>
+
+  <main id="accueil">
+
+    <!-- Bandeau principal -->
+    <section class="hero">
+      <div class="conteneur hero-grille">
+        <div class="hero-texte">
+          <h1>Des objets bien choisis pour la maison et le bureau.</h1>
+          <p>Mobilier, luminaires, déco et accessoires sélectionnés pour durer. Prix clairs, stock disponible, livraison rapide.</p>
+          <div class="hero-actions">
+            <a class="btn btn-jaune" href="#catalogue">Voir le catalogue</a>
+            <a class="btn btn-contour" href="#offres">Offres en cours</a>
+          </div>
+        </div>
+        <div class="hero-visuel" aria-hidden="true">
+          <div class="disque"></div>
+          <div class="objet o1"><svg class="ico"><use href="#chair"/></svg></div>
+          <div class="objet o2"><svg class="ico"><use href="#lamp"/></svg></div>
+          <div class="objet o3"><svg class="ico"><use href="#vase"/></svg></div>
+          <div class="pastille">-25%<small>sur le bureau</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publicités / promotions -->
+    <section class="section" id="offres">
+      <div class="conteneur">
+        <h2>Les offres du moment</h2>
+        <div class="pubs">
+          <article class="pub pub-grande">
+            <div>
+              <p class="pub-etiquette">Jusqu'au 31 du mois</p>
+              <h3>Équipez votre bureau<br>à -25 %</h3>
+              <p>Fauteuils, lampes et rangements en promotion. Quantités limitées.</p>
+              <a class="btn btn-jaune" href="#catalogue">Profiter de l'offre</a>
+            </div>
+            <svg class="ico pub-ico"><use href="#chair"/></svg>
+          </article>
+          <article class="pub pub-corail">
+            <p class="pub-etiquette">Cuisine et maison</p>
+            <h3>2 mugs achetés, le 3<sup>e</sup> offert</h3>
+            <svg class="ico pub-ico"><use href="#mug"/></svg>
+          </article>
+          <article class="pub pub-menthe">
+            <p class="pub-etiquette">Nouveautés</p>
+            <h3>Nouvelle collection d'accessoires</h3>
+            <svg class="ico pub-ico"><use href="#bag"/></svg>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalogue -->
+    <section class="section section-fond" id="catalogue">
+      <div class="conteneur catalogue">
+        <div class="catalogue-tete">
+          <h2>Notre catalogue</h2>
+          <div class="filtres" role="radiogroup" aria-label="Filtrer par catégorie">
+            <input type="radio" name="filtre" id="f-tout" checked><label for="f-tout">Tout</label>
+            <input type="radio" name="filtre" id="f-bureau"><label for="f-bureau">Bureau</label>
+            <input type="radio" name="filtre" id="f-maison"><label for="f-maison">Maison</label>
+            <input type="radio" name="filtre" id="f-accessoires"><label for="f-accessoires">Accessoires</label>
+          </div>
+        </div>
+
+        <div class="produits">
+          <article class="carte" data-cat="bureau">
+            <div class="visuel v1"><span class="badge badge-promo">-25%</span><svg class="ico"><use href="#chair"/></svg></div>
+            <div class="carte-corps">
+              <h3>Fauteuil Atelier</h3>
+              <p>Assise rembourrée, dossier ergonomique.</p>
+              <div class="carte-pied"><span class="prix"><s>160 €</s> 120 €</span><a class="btn btn-petit" href="#contact">Commander</a></div>
+            </div>
+          </article>
+
+          <article class="carte" data-cat="bureau maison">
+            <div class="visuel v2"><span class="badge badge-promo">-25%</span><svg class="ico"><use href="#lamp"/></svg></div>
+            <div class="carte-corps">
+              <h3>Lampe Arc</h3>
+              <p>Lumière chaude réglable, pied lesté.</p>
+              <div class="carte-pied"><span class="prix"><s>60 €</s> 45 €</span><a class="btn btn-petit" href="#contact">Commander</a></div>
+            </div>
+          </article>
+
+          <article class="carte" data-cat="bureau maison">
+            <div class="visuel v3"><svg class="ico"><use href="#shelf"/></svg></div>
+            <div class="carte-corps">
+              <h3>Étagère Modulo</h3>
+              <p>Six niveaux, montage sans outil.</p>
+              <div class="carte-pied"><span class="prix">89 €</span><a class="btn btn-petit" href="#contact">Commander</a></div>
+            </div>
+          </article>
+
+          <article class="carte" data-cat="maison">
+            <div class="visuel v4"><span class="badge badge-nouveau">Nouveau</span><svg class="ico"><use href="#vase"/></svg></div>
+            <div class="carte-corps">
+              <h3>Vase Terra</h3>
+              <p>Céramique émaillée faite main.</p>
+              <div class="carte-pied"><span class="prix">34 €</span><a class="btn btn-petit" href="#contact">Commander</a></div>
+            </div>
+          </article>
+
+          <article class="carte" data-cat="maison">
+            <div class="visuel v5"><span class="badge badge-promo">3 pour 2</span><svg class="ico"><use href="#mug"/></svg></div>
+            <div class="carte-corps">
+              <h3>Mug Brume</h3>
+              <p>Grès, passe au lave-vaisselle.</p>
+              <div class="carte-pied"><span class="prix">12 €</span><a class="btn btn-petit" href="#contact">Commander</a></div>
+            </div>
+          </article>
+
+          <article class="carte" data-cat="accessoires">
+            <div class="visuel v6"><span class="badge badge-nouveau">Nouveau</span><svg class="ico"><use href="#bag"/></svg></div>
+            <div class="carte-corps">
+              <h3>Sac Cabas Nord</h3>
+              <p>Toile épaisse, poche intérieure zippée.</p>
+              <div class="carte-pied"><span class="prix">48 €</span><a class="btn btn-petit" href="#contact">Commander</a></div>
+            </div>
+          </article>
+
+          <article class="carte" data-cat="accessoires">
+            <div class="visuel v7"><svg class="ico"><use href="#watch"/></svg></div>
+            <div class="carte-corps">
+              <h3>Montre Horizon</h3>
+              <p>Bracelet cuir, étanche 50 m.</p>
+              <div class="carte-pied"><span class="prix">99 €</span><a class="btn btn-petit" href="#contact">Commander</a></div>
+            </div>
+          </article>
+
+          <article class="carte" data-cat="accessoires bureau">
+            <div class="visuel v8"><svg class="ico"><use href="#headphones"/></svg></div>
+            <div class="carte-corps">
+              <h3>Casque Studio</h3>
+              <p>Sans fil, 30 h d'autonomie.</p>
+              <div class="carte-pied"><span class="prix">79 €</span><a class="btn btn-petit" href="#contact">Commander</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Atouts -->
+    <section class="section" id="atouts">
+      <div class="conteneur">
+        <h2>Pourquoi acheter chez nous</h2>
+        <ul class="atouts">
+          <li>
+            <h3>Livraison rapide</h3>
+            <p>Commande expédiée sous 48 h, suivi par SMS.</p>
+          </li>
+          <li>
+            <h3>Retours sous 30 jours</h3>
+            <p>Un produit ne convient pas ? Nous le reprenons.</p>
+          </li>
+          <li>
+            <h3>Garantie 2 ans</h3>
+            <p>Réparation ou remplacement en cas de défaut.</p>
+          </li>
+          <li>
+            <h3>Conseil par téléphone</h3>
+            <p>Une équipe qui connaît chaque produit répond à vos questions.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section class="section apropos" id="apropos">
+      <div class="conteneur apropos-grille">
+        <h2>Une boutique, une sélection</h2>
+        <div>
+          <p>Maison Kalo est née d'une idée simple : proposer moins de produits, mais des produits que l'on garde longtemps. Chaque article du catalogue est testé par l'équipe avant d'être mis en vente.</p>
+          <p>Nous travaillons avec des fabricants que nous connaissons, ce qui nous permet de garder des prix justes et un stock fiable.</p>
+          <dl class="chiffres">
+            <div><dt>12</dt><dd>ans d'expérience</dd></div>
+            <div><dt>3 500</dt><dd>clients livrés</dd></div>
+            <div><dt>98 %</dt><dd>de clients satisfaits</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="conteneur contact-grille">
+        <div>
+          <h2>Une question, un devis ?</h2>
+          <p>Écrivez-nous, nous répondons en moins d'une journée ouvrée.</p>
+          <ul class="coordonnees">
+            <li>Téléphone : 01 23 45 67 89</li>
+            <li>E-mail : contact@maisonkalo.com</li>
+            <li>12 rue de l'Exemple, 75000 Ville</li>
+            <li>Ouvert du lundi au samedi, 9 h – 18 h</li>
+          </ul>
+        </div>
+        <form class="formulaire" action="#" method="post">
+          <label for="nom">Nom</label>
+          <input id="nom" name="nom" type="text" autocomplete="name" required>
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button class="btn btn-jaune" type="submit">Envoyer le message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur pied-grille">
+      <p class="marque">Maison Kalo</p>
+      <nav aria-label="Liens du pied de page">
+        <a href="#offres">Offres</a>
+        <a href="#catalogue">Catalogue</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="mentions">© 2026 Maison Kalo. Tous droits réservés.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
